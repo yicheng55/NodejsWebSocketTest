@@ -13,5 +13,6 @@ ws.onclose = () => {
 
 //接收 Server 發送的訊息
 ws.onmessage = event => {
-    console.log(event)
+    console.log(event.data)
+    document.getElementById("demo").innerHTML = event.data;
 }
